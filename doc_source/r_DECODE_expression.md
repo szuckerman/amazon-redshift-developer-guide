@@ -37,8 +37,8 @@ When used this way, DECODE is similar to [NVL2 expression](r_NVL2.md), but there
 When the value `2008-06-01` exists in the START\_DATE column of DATETABLE, the following example replaces it with `June 1st, 2008`\. The example replaces all other START\_DATE values with NULL\. 
 
 ```
-select decode(caldate, '2008-06-01', 'June 1st, 2008')
-from date where month='JUN' order by caldate;
+select decode(START_DATE, '2008-06-01', 'June 1st, 2008')
+from DATETABLE where month='JUN' order by caldate;
 
 case
 ----------------
